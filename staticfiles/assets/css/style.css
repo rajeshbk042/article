@@ -1,0 +1,180 @@
+
+
+section.section-wrap .container{
+padding-top:80px;
+width:940px;
+}
+
+h2 {
+    font-weight: bold;
+}
+.h1, .h2, .h3, h1, h2, h3 {
+    margin-top: 0px;
+    margin-bottom: 10px;
+}
+p.content-section{
+padding-top: 30px;
+}
+
+.date-div {
+    right: 0;
+    bottom: 10px;
+    color: #636363;
+    font-size: 11px;
+}
+.date-div span.span-sep {
+    padding-left: 4px;
+    padding-right: 4px;
+}
+
+.span-justify {
+    top: 6px;
+    color: #0C81E4;
+    padding-left: 10px;
+    font-size: 19px;
+}
+
+.search-icon {
+    top: 6px;
+    color: #0C81E4;
+    padding-left: 31px;
+    font-size: 19px;
+}
+
+.search-divider {
+    position: absolute;
+    top: 90px;
+    padding-left: 15px;
+    font-size: 19px;
+    color: #EAE6E6;
+}
+
+.sidebar {
+  box-sizing: border-box;
+  width: 100%;
+  border: 3px solid #DDD;
+
+}
+
+button.search-btn{
+  background:none;
+  border:none;
+  font-size:1em;
+  color:blue;
+
+}
+
+.div-nav-bar {
+padding: 20px;
+}
+
+.div-nav-bar li{
+padding: 5px;
+}
+.side-nav{
+    padding:0px;
+    width: 11.666667%;
+}
+.image-container {
+    padding:10px;
+}
+
+hr {
+    margin-top: 8px;
+    margin-bottom: 4px;
+    border-top: 1px solid #eee;
+    border: 3px solid #DDD;
+}
+
+.hr-bottom {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    border: 1px solid #DDD;
+}
+
+.nav-img {
+    width:100%;
+}
+
+.circleBase {
+    border-radius: 50%;
+    behavior: url(PIE.htc); /* remove if you don't care about IE8 */
+}
+
+.list-circle {
+    width: 45px;
+    height: 45px;
+    text-align: center;
+    border-radius: 50%;
+    border: 3px solid black;
+    font-weight: bold;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%)
+}
+.desc {
+        width: 89%;
+}
+.main-view {
+    position: relative;
+}
+.list-circle span{
+    position: relative;
+    top: 12px;
+}
+
+
+.slick-slider {
+		overflow: hidden;
+	}
+	.slick-slider div {
+		height: 150px;
+		padding: 8px;
+	}
+	.slick-slider div img {
+		height: 100%;
+   		width: 100%;
+		overflow: hidden;
+	}
+	.clearfix {
+		clear: both;
+	}
+	.control-btn .prev,
+	.control-btn .next {
+		display: inline-block;
+	    font-size: 30px;
+	    color: #35ADEA;
+	  	padding: 10px 5px;
+	  	cursor: pointer;
+	}
+	.slider-heading h3 {
+		margin: 0px
+	}
+	.slider-heading .divider {
+		padding: 0px;
+		line-height: 18px;
+		position: relative;
+		bottom: 3px;
+		font-weight: 500;
+		font-size: 13px;
+	}
+
+	.control-btn .prev, .control-btn .next {
+    display: inline-block;
+    font-size: 19px;
+    color: #35ADEA;
+    padding: 10px 5px;
+    cursor: pointer;
+}
+
+.slide-section-top {
+    position:relative;
+}
+
+.text-pos {
+ position:absolute;
+ top:16px;
+ font-weight: bold;
+}

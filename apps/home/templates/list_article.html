@@ -1,0 +1,103 @@
+{% extends 'base.html' %}
+{% block title %}Article list{% endblock %}
+{% block content %}
+<section class="section-wrap">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-2 side-nav">
+                <div class="sidebar">
+                    <div class="image-container">
+                        <img src="{{ article.image_thumbnail.url }}" class="img-responsive" alt="Cinque Terre"/>
+                    </div>
+                    <hr/>
+                    <div>
+                        <div> <span class="glyphicon glyphicon-align-justify span-justify" aria-hidden="true">
+                        </span>
+                            <span class="search-divider">|</span>
+                            <button class="search-btn" type="submit">
+                                <span class="glyphicon glyphicon-search search-icon" aria-hidden="true"></span></button>
+
+                        </div>
+                        <hr/>
+                        <div class="div-nav-bar">
+
+                            <ul class="nav nav-pills nav-stacked">
+                                <li class="active"><a href="#"><img src="/static/assets/images/images.jpg"
+                                                                    class="img-responsive nav-img" alt="Cinque Terre"/></a>
+                                </li>
+                                <li><a href="#"><img src="/static/assets/images/free-wallpapers-for-desktop.jpg"
+                                                     class="img-responsive nav-img" alt="Cinque Terre"/></a></li>
+                                <li><a href="#"><img src="/static/assets/images/images.jpg" class="img-responsive nav-img"
+                                                     alt="Cinque Terre"/></a></li>
+                            </ul>
+                        </div>
+
+
+                    </div><!-- /input-group -->
+                </div>
+            </div>
+            <div class="col-md-10">
+                <h2>Top 10 List</h2>
+                <p class="date-div">{{ article.publish_date|date:"F jS, Y" }}<span class="span-sep">|</span><a href="">{{ article.name }}</a>
+                </p>
+                {% if article.addtional_image_thumbnail.url %}
+                <img src="{{ article.addtional_image_thumbnail.url }}" class="img-responsive" alt="Cinque Terre"/>
+                {% else %}
+                <img src="/static/assets/images/free-wallpapers-for-desktop.jpg" class="img-responsive" alt="Cinque Terre"/>
+                {% endif %}
+                <p class="text-left content-section">{{ article.content }}</p>
+                <ul class="list-inline">
+                    {% for art in object_list %}
+                    <li>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="main-view">
+                                    <span class="circleBase list-circle"><span>{{ forloop.counter }}</span></span>
+
+                                    <div class="desc pull-right">
+                                        <h2>{{ art.name }}</h2>
+                                        <p>{{ art.content }}</p>
+
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    {% endfor %}
+                </ul>
+                <div class="clearfix"></div>
+                <div class="slide-section-top">
+                <hr class="hr-bottom"/>
+                <div class="slider-heading">
+                    <h3 class="pull-left text-pos">What to read next </h3>
+                    <div class="control-btn pull-right">
+                        <div class="prev"><i class="fa fa-angle-left"></i></div>
+                        <span class="divider">|</span>
+                        <div class="next"><i class="fa fa-angle-right"></i></div>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+
+ <hr class="hr-bottom"/>
+</div>
+                <div class="row slick-slider">
+                    <div><a href=""><img src="/static/assets/images/1.jpg"></a></div>
+                    <div><a href=""><img src="/static/assets/images/2.jpg"></a></div>
+                    <div><a href=""><img src="/static/assets/images/3.jpg"></a></div>
+                    <div><a href=""><img src="/static/assets/images/4.jpg"></a></div>
+                    <div><a href=""><img src="/static/assets/images/5.jpg"></a></div>
+                    <div><a href=""><img src="/static/assets/images/6.jpg"></a></div>
+                    <div><a href=""><img src="/static/assets/images/7.jpg"></a></div>
+                    <div><a href=""><img src="/static/assets/images/8.jpg"></a></div>
+                    <div><a href=""><img src="/static/assets/images/9.jpg"></a></div>
+                    <div><a href=""><img src="/static/assets/images/10.jpg"></a></div>
+                </div>
+                <div class="clearfix"></div>
+
+            </div>
+        </div>
+    </div>
+
+</section>
+{% endblock %}
