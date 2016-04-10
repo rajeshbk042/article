@@ -8,6 +8,7 @@ from apps.home.views import *
 urlpatterns = patterns('',
     # Examples:
     url(r'^$', ArticleListView.as_view(), name='home'),
+    url(r'^article/(?P<slug>[-\w]+)/$', ArticleDetailView.as_view(), name='article-detail'),
     # url(r'^blog/', include('blog.urls')),
 
     url(r'^admin/', include(admin.site.urls)),

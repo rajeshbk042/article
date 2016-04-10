@@ -7,7 +7,7 @@
             <div class="col-md-2 side-nav">
                 <div class="sidebar">
                     <div class="image-container">
-                        <img src="{{ article.image_thumbnail.url }}" class="img-responsive" alt="Cinque Terre"/>
+                        <img src="{{ object.image_thumbnail.url }}" class="img-responsive" alt="Cinque Terre"/>
                     </div>
                     <hr/>
                     <div>
@@ -37,36 +37,16 @@
                 </div>
             </div>
             <div class="col-md-10">
-                <h2>Top 10 List</h2>
-                <p class="date-div">{{ article.publish_date|date:"F jS, Y" }}<span class="span-sep">|</span><a href="">{{ article.name }}</a>
+                <h2>{{ object.name }}</h2>
+                <p class="date-div">{{ object.publish_date|date:"F jS, Y" }}<span class="span-sep">|</span><a href="">{{ article.name }}</a>
                 </p>
-                {% if article.addtional_image_thumbnail.url %}
+                {% if object.addtional_image_thumbnail.url %}
                 <img src="{{ article.addtional_image_thumbnail.url }}" class="img-responsive" alt="Cinque Terre"/>
                 {% else %}
                 <img src="/static/assets/images/free-wallpapers-for-desktop.jpg" class="img-responsive" alt="Cinque Terre"/>
                 {% endif %}
-                <p class="text-left content-section">{{ article.content }}</p>
-                <ul class="list-inline">
-                    {% for art in object_list %}
-                    <li>
-                        <div class="row">
-                            <div class="col-md-12">
-                                <div class="main-view">
-                                    <span class="circleBase list-circle"><span>{{ forloop.counter }}</span></span>
+                <p class="text-left content-section">{{ object.content }}</p>
 
-                                    <div class="desc pull-right">
-                                        <h2>{{ art.name }}</h2>
-                                        <p>{{ art.content }}</p>
-
-                                    </div>
-                                    <div class="clearfix"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <p class="action-link"><a href="{{ art.get_absolute_url }}">Call to Action</a></p>
-                    {% endfor %}
-                </ul>
                 <div class="clearfix"></div>
                 <div class="slide-section-top">
                 <hr class="hr-bottom"/>
@@ -83,7 +63,7 @@
  <hr class="hr-bottom"/>
 </div>
                 <div class="row slick-slider">
-                    {% for art in object_list %}
+                    {% for art in articles %}
                     {% if art.slider_image_thumbnail.url %}
                     <div><a href="{{ art.get_absolute_url }}"><img src="{{ art.slider_image_thumbnail.url }}"></a></div>
                     <div><a href="{{ art.get_absolute_url }}"><img src="/static/assets/images/2.jpg"></a></div>

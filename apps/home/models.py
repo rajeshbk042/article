@@ -2,10 +2,12 @@ from __future__ import unicode_literals
 from django.utils.translation import ugettext_lazy as _
 
 from django.db import models
+from django.core.urlresolvers import reverse
 
 from ckeditor.fields import RichTextField
 from imagekit.models import ImageSpecField
 from imagekit.processors import ResizeToFill
+from autoslug import AutoSlugField
 
 
 class Category(models.Model):
@@ -39,10 +41,21 @@ class Article(models.Model):
                                       format='JPEG',
                                       options={'quality': 60})
 
+    slider_image_thumbnail = ImageSpecField(source='image',
+                                      processors=[ResizeToFill(176, 134)],
+                                      format='JPEG',
+                                      options={'quality': 60})
+
     addtional_image_thumbnail = ImageSpecField(source='addtional_image',
                                       processors=[ResizeToFill(753, 424)],
                                       format='JPEG',
                                       options={'quality': 60})
+
+    slug = AutoSlugField(populate_from='name')
+
+
+    def get_absolute_url(self):
+        return reverse('article-detail', kwargs={'slug': self.slug})
 
 
     def __unicode__(self):

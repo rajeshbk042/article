@@ -102,11 +102,11 @@ hr {
 }
 
 .list-circle {
-    width: 45px;
-    height: 45px;
+    width: 43px;
+    height: 43px;
     text-align: center;
     border-radius: 50%;
-    border: 3px solid black;
+    border: 1px solid black;
     font-weight: bold;
     position: absolute;
     top: 50%;
@@ -128,6 +128,7 @@ hr {
 
 .slick-slider {
 		overflow: hidden;
+		position:relative;
 	}
 	.slick-slider div {
 		height: 150px;
@@ -177,4 +178,15 @@ hr {
  position:absolute;
  top:16px;
  font-weight: bold;
+}
+
+.action-link {
+
+    padding-left: 12%;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.action-link a{
+    color: #0C81E4;
 }
